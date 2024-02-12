@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
+@import url(animations.css);
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-image: url(/assets/img/background.jpg);
+  background-size: 110rem;
+  background-repeat: no-repeat;
+  /* background-position: left top; */
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 4rem auto 3rem;
+  grid-template-areas:
+    "main-header main-header main-header"
+    "left-side main-body right-side"
+    "main-footer main-footer main-footer";
+}
+
+.main-header {
+  grid-area: main-header;
+  background-color: #d6fb41;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.title {
+  margin: 0;
+  padding-left: 5rem;
+  grid-column: 1/2;
+  align-self: center;
+  /* justify-self: center; */
+  font-family: "Wellfleet", monospace;
+}
+
+.navbar {
+  padding-right: 5rem;
+  grid-column: 2/3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+.navbar__items {
+  margin: 0;
+  padding-top: 0.3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.navbar__item {
+  /* margin-top: 0.2rem; */
+  margin-right: 1rem;
+  align-self: center;
+}
+
+.navbar__item a {
+  text-decoration: none;
+}
+.linkedin__icon {
+  height: 3rem;
+  width: 3rem;
+}
+.left-side {
+  grid-area: left-side;
+}
+.right-side {
+  grid-area: right-side;
+}
+
+.main-body {
+  grid-area: main-body;
+  height: 100%;
+}
+.main-footer {
+  grid-area: main-footer;
+  background-color: #161616;
+}
