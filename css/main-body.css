@@ -7,9 +7,10 @@
 
 .main-body__title {
   justify-self: center;
-  align-self: center;
+  /* align-self: center; */
   font-family: "Wellfleet", monospace;
   font-size: 5rem;
+  margin-top: 1rem;
 }
 .main-body__summary {
   font-family: "Wellfleet", monospace;
