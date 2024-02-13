@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
 @import url(animations.css);
+@import url(left-side.css);
+@import url(right-side.css);
+@import url(main-body.css);
 * {
   box-sizing: border-box;
 }
@@ -10,7 +13,8 @@ body {
   height: 100%;
   background-image: url(/assets/img/background.jpg);
   background-size: 110rem;
-  background-repeat: no-repeat;
+  /* background-repeat: repeat-x; */
+  /* background-color: #0e0e0e; */
   /* background-position: left top; */
   margin: 0;
 }
@@ -18,7 +22,7 @@ body {
 .container {
   display: grid;
   height: 100%;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 10% 80% 10%;
   grid-template-rows: 4rem auto 3rem;
   grid-template-areas:
     "main-header main-header main-header"
@@ -27,27 +31,37 @@ body {
 }
 
 .main-header {
+  position: fixed;
+  width: 100%;
   grid-area: main-header;
   background-color: #d6fb41;
   margin: 0;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 5% 45% 50%;
+  grid-template-areas: "logo title navbar";
+  z-index: 1;
 }
-.title {
-  margin: 0;
-  padding-left: 5rem;
-  grid-column: 1/2;
+.logo {
+  height: 3rem;
+  width: 3rem;
   align-self: center;
-  /* justify-self: center; */
+  justify-self: center;
+  margin-left: 2rem;
+}
+.my-name {
+  margin: 0;
+  padding-top: 0.3rem;
+  grid-area: title;
+  align-self: center;
   font-family: "Wellfleet", monospace;
 }
 
 .navbar {
-  padding-right: 5rem;
-  grid-column: 2/3;
+  grid-area: navbar;
   justify-self: end;
   display: flex;
   align-items: center;
+  padding-right: 2rem;
 }
 .navbar__items {
   margin: 0;
@@ -57,30 +71,36 @@ body {
   align-items: center;
 }
 .navbar__item {
-  /* margin-top: 0.2rem; */
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   align-self: center;
 }
 
+.navbar__item:hover,
+.navbar__item:active {
+  -webkit-animation: rotate-scale-up 0.5s linear both;
+  animation: rotate-scale-up 0.5s linear both;
+}
 .navbar__item a {
   text-decoration: none;
 }
-.linkedin__icon {
+.navbar__icon {
   height: 3rem;
   width: 3rem;
 }
-.left-side {
-  grid-area: left-side;
-}
-.right-side {
-  grid-area: right-side;
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Wellfleet", monospace;
+  color: #a3a3a3;
+  grid-area: main-footer;
+  align-self: center;
+  background-color: #161616;
 }
 
-.main-body {
-  grid-area: main-body;
-  height: 100%;
-}
-.main-footer {
-  grid-area: main-footer;
-  background-color: #161616;
+.main-footer__heart {
+  margin: 0 0.5rem;
+  height: 2rem;
+  width: 2rem;
 }

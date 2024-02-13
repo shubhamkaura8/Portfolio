@@ -1,0 +1,38 @@
+.left-side {
+  display: grid;
+  /* grid-template-columns: 100%; */
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "shooting-star"
+    "astronaut"
+    "space-station";
+  /* border: 5px solid red; */
+  grid-area: left-side;
+}
+.left-side__shooting-star {
+  grid-area: shooting-star;
+  justify-self: center;
+  align-self: center;
+  height: 5rem;
+  width: 5rem;
+}
+.left-side__astronaut {
+  grid-area: astronaut;
+  justify-self: center;
+  align-self: center;
+  height: 5rem;
+  width: 5rem;
+  -webkit-animation: rotate-center 40s ease-in-out infinite alternate both;
+  animation: rotate-center 40s ease-in-out infinite alternate both;
+}
+.left-side__space-station {
+  grid-area: space-station;
+  justify-self: center;
+  align-self: center;
+  height: 5rem;
+  width: 5rem;
+  -webkit-animation: shake-vertical 30s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite alternate both;
+  animation: shake-vertical 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    alternate both;
+}

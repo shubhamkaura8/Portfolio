@@ -1,0 +1,34 @@
+.main-body {
+  display: grid;
+  grid-area: main-body;
+  color: #d6fb41;
+  height: 100%;
+}
+
+.main-body__title {
+  justify-self: center;
+  align-self: center;
+  font-family: "Wellfleet", monospace;
+  font-size: 5rem;
+}
+.main-body__summary {
+  font-family: "Wellfleet", monospace;
+  justify-self: center;
+  align-self: center;
+}
+.main-body__education {
+  justify-self: center;
+  font-family: "Wellfleet", monospace;
+}
+.main-body__skills {
+  justify-self: center;
+  font-family: "Wellfleet", monospace;
+}
+.main-body__projects {
+  justify-self: center;
+  font-family: "Wellfleet", monospace;
+}
+.main-body__hire-me {
+  justify-self: center;
+  font-family: "Wellfleet", monospace;
+}
