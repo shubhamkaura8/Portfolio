@@ -11,10 +11,10 @@ html {
 }
 body {
   height: 100%;
-  background-image: url(/assets/img/background.jpg);
+  /* background-image: url(/assets/img/background.jpg);
   background-size: 110rem;
-  /* background-repeat: repeat-x; */
-  /* background-color: #0e0e0e; */
+  background-repeat: repeat-x; */
+  background-color: #0e0e0e;
   /* background-position: left top; */
   margin: 0;
 }
@@ -97,6 +97,9 @@ body {
   grid-area: main-footer;
   align-self: center;
   background-color: #161616;
+}
+.main-footer h4 {
+  margin-bottom: 0.3rem;
 }
 
 .main-footer__heart {
