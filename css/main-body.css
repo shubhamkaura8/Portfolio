@@ -4,9 +4,10 @@
   grid-template-rows: 8rem auto;
   color: #d6fb41;
   height: 100%;
+  margin: 0 10rem;
 }
 
-.main-body__title {
+.main-title {
   justify-self: center;
   font-family: "Wellfleet", monospace;
   font-size: 5rem;
@@ -14,42 +15,53 @@
   margin-bottom: 0;
   color: #f0f0f0;
 }
-.card {
-  display: grid;
-  grid-template-columns: 4rem auto;
-  grid-template-rows: 4rem auto;
-  grid-template-areas:
-    "card__title card__title"
-    "card__svg card__info";
-  border-radius: 1rem;
-  font-family: "Wellfleet", monospace;
+
+.down-arrow {
   justify-self: center;
-  background-color: #161616;
+  align-self: center;
+  height: 3rem;
+  width: 3rem;
+  -webkit-animation: shake-vertical 20s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite alternate both;
+  animation: shake-vertical 20s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    alternate both;
 }
-.card__title {
-  grid-area: card__title;
-}
-.card__svg {
-  grid-area: card__svg;
-}
-.card__info {
-  grid-area: card__info;
-}
-.main-body__summary {
-  margin-bottom: 5rem;
-  text-align: center;
-  width: 100%;
+.hidden {
+  display: none;
 }
 
-.main-body__education {
-  display: none;
+.education__info {
+  margin: 0;
 }
-.main-body__skills {
-  display: none;
+.education__info h2,
+p {
+  word-spacing: 0;
+  margin: 0;
+  padding: 0;
 }
-.main-body__projects {
-  display: none;
+.education__info h2 {
+  margin-top: 2rem;
 }
-.main-body__hire-me {
-  display: none;
+
+.skills__info {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.skills__info__svg {
+  height: 3rem;
+  width: 3rem;
+}
+.hire-me__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  border: 0.3rem solid #d6fb41;
+  border-radius: 1rem;
+  margin: 0 4rem;
+  padding: 1rem 3rem;
 }

@@ -1,0 +1,32 @@
+.card {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 4rem auto;
+  grid-template-areas:
+    "card__title card__title"
+    "card__svg card__info";
+  border-radius: 1rem;
+  font-family: "Wellfleet", monospace;
+  background-color: #161616;
+  padding: 0rem 5rem;
+  border-inline: 5px solid #d6fb41;
+}
+.card__title {
+  grid-area: card__title;
+  letter-spacing: 0.2rem;
+  justify-self: center;
+  text-decoration: underline;
+}
+.card__svg {
+  grid-area: card__svg;
+  justify-self: center;
+  margin-top: 3rem;
+  width: 10rem;
+  height: 10rem;
+}
+.card__info {
+  grid-area: card__info;
+  word-spacing: 0.8rem;
+  color: #f0f0f0;
+  margin: 3rem 5rem;
+}

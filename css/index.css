@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
-@import url(animations.css);
+@import url(card.css);
 @import url(left-side.css);
 @import url(right-side.css);
 @import url(main-body.css);
+@import url(animations.css);
 * {
   box-sizing: border-box;
 }
@@ -14,7 +15,8 @@ body {
   /* background-image: url(/assets/img/background.jpg);
   background-size: 110rem;
   background-repeat: repeat-x; */
-  background-color: #0e0e0e;
+  /* background-color: #0e0e0e; */
+  background: radial-gradient(#0e0e0e, #161616, #1d1d1d);
   /* background-position: left top; */
   margin: 0;
 }
