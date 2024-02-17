@@ -16,15 +16,11 @@
   color: #f0f0f0;
 }
 
-.down-arrow {
+.arrow-btns {
   justify-self: center;
-  align-self: center;
+
   height: 3rem;
   width: 3rem;
-  -webkit-animation: shake-vertical 20s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite alternate both;
-  animation: shake-vertical 20s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    alternate both;
 }
 .hidden {
   display: none;

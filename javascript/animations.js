@@ -1,26 +1,9 @@
 const title = document.querySelector(".main-title");
-// const cardsList = document.querySelectorAll(".card");
+const arrowBtnRight = document.querySelector("#arrow-btn__right");
+const arrowBtnLeft = document.querySelector("#arrow-btn__Left");
+const cardsList = document.querySelectorAll(".card");
 
-// let animationIteration = 1;
-// let curCard = 0;
-
-// window.addEventListener("wheel", (e) => {
-//   if (e.deltaY === 100) {
-//     if (curCard > cardsList.length - 1) {
-//       return;
-//     }
-//     console.log(curCard);
-//     console.log(cardsList.length - 1);
-//     let card = cardsList[curCard];
-//     if (curCard > 0) {
-//       cardsList[curCard - 1].classList.add("slide-out-bck-top");
-//       cardsList[curCard - 1].classList.remove("slide-in-bck-bottom");
-//     }
-//     card.classList.remove("hidden");
-//     card.classList.add("slide-in-bck-bottom");
-//     curCard += 1;
-//   }
-// });
+let animationIteration = 1;
 
 window.addEventListener("load", () => {
   title.textContent = "HELLO!";
@@ -59,3 +42,20 @@ title.addEventListener("animationend", () => {
     }
   }
 });
+
+///////////////////////
+///Right Button
+let currCardNum = 0;
+
+arrowBtnRight.addEventListener("click", function (e) {
+  console.log(currCardNum);
+  e.preventDefault();
+  cardsList[currCardNum].classList.add("hidden");
+  if (currCardNum < cardsList.length - 1) currCardNum += 1;
+  cardsList[currCardNum].classList.remove("hidden");
+  if (currCardNum === cardsList.length - 1) {
+    arrowBtnRight.classList.toggle("hidden");
+    arrowBtnLeft.classList.toggle("hidden");
+  }
+});
+arrowBtnLeft.addEventListener("click", function (e) {});
