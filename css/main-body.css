@@ -17,11 +17,27 @@
 }
 
 .arrow-btns {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "left right";
   justify-self: center;
-
-  height: 3rem;
-  width: 3rem;
+  width: 100%;
 }
+#arrow-btn__right {
+  grid-area: right;
+  justify-self: center;
+  align-self: center;
+  height: 5rem;
+  width: 5rem;
+}
+#arrow-btn__left {
+  grid-area: left;
+  align-self: center;
+  justify-self: center;
+  height: 5rem;
+  width: 5rem;
+}
+
 .hidden {
   display: none;
 }

@@ -48,14 +48,23 @@ title.addEventListener("animationend", () => {
 let currCardNum = 0;
 
 arrowBtnRight.addEventListener("click", function (e) {
-  console.log(currCardNum);
   e.preventDefault();
   cardsList[currCardNum].classList.add("hidden");
-  if (currCardNum < cardsList.length - 1) currCardNum += 1;
+  if (currCardNum < cardsList.length - 1) {
+    currCardNum += 1;
+    arrowBtnLeft.classList.remove("hidden");
+  }
   cardsList[currCardNum].classList.remove("hidden");
   if (currCardNum === cardsList.length - 1) {
-    arrowBtnRight.classList.toggle("hidden");
-    arrowBtnLeft.classList.toggle("hidden");
+    arrowBtnRight.classList.add("hidden");
   }
 });
-arrowBtnLeft.addEventListener("click", function (e) {});
+arrowBtnLeft.addEventListener("click", function (e) {
+  e.preventDefault();
+  cardsList[currCardNum].classList.add("hidden");
+  currCardNum -= 1;
+  cardsList[currCardNum].classList.remove("hidden");
+  if (currCardNum === 0) arrowBtnLeft.classList.add("hidden");
+  if (currCardNum < cardsList.length - 1)
+    arrowBtnRight.classList.remove("hidden");
+});
