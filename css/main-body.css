@@ -23,23 +23,17 @@
   justify-self: center;
   width: 100%;
 }
-#arrow-btn__right {
+.arrow-btn {
+  justify-self: center;
+  align-self: center;
+  height: 5rem;
+  width: 5rem;
+}
+.arrow-btn--right {
   grid-area: right;
-  justify-self: center;
-  align-self: center;
-  height: 5rem;
-  width: 5rem;
 }
-#arrow-btn__left {
+.arrow-btn--left {
   grid-area: left;
-  align-self: center;
-  justify-self: center;
-  height: 5rem;
-  width: 5rem;
-}
-
-.hidden {
-  display: none;
 }
 
 .education__info {
@@ -73,7 +67,14 @@ p {
 }
 .btn {
   border: 0.3rem solid #d6fb41;
+  background-color: inherit;
+  text-decoration: none;
+  color: inherit;
   border-radius: 1rem;
   margin: 0 4rem;
   padding: 1rem 3rem;
+}
+
+.hidden {
+  display: none;
 }

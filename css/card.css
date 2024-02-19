@@ -11,7 +11,7 @@
 
   background: radial-gradient(#1d1d1d, #161616, #0e0e0e);
   padding: 0rem 5rem;
-  /* border-inline: 5px solid #d6fb41; */
+  border-inline: 5px solid #d6fb41;
 }
 .card__title {
   grid-area: card__title;
