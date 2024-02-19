@@ -7,9 +7,11 @@
     "card__svg card__info";
   border-radius: 1rem;
   font-family: "Wellfleet", monospace;
-  background-color: #161616;
+  background-color: #343434;
+
+  background: radial-gradient(#1d1d1d, #161616, #0e0e0e);
   padding: 0rem 5rem;
-  border-inline: 5px solid #d6fb41;
+  /* border-inline: 5px solid #d6fb41; */
 }
 .card__title {
   grid-area: card__title;

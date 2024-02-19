@@ -47,24 +47,41 @@ title.addEventListener("animationend", () => {
 ///Right Button
 let currCardNum = 0;
 
-arrowBtnRight.addEventListener("click", function (e) {
+arrowBtnRight.addEventListener("click", async function (e) {
   e.preventDefault();
+  cardsList[currCardNum].classList.add("slide-out-blurred-left");
+  await wait(0.3);
   cardsList[currCardNum].classList.add("hidden");
+  cardsList[currCardNum].classList.remove("slide-out-blurred-left");
   if (currCardNum < cardsList.length - 1) {
     currCardNum += 1;
     arrowBtnLeft.classList.remove("hidden");
   }
   cardsList[currCardNum].classList.remove("hidden");
+  cardsList[currCardNum].classList.add("slide-in-blurred-right");
+  await wait(0.3);
+  cardsList[currCardNum].classList.remove("slide-in-blurred-right");
+
   if (currCardNum === cardsList.length - 1) {
     arrowBtnRight.classList.add("hidden");
   }
 });
-arrowBtnLeft.addEventListener("click", function (e) {
+arrowBtnLeft.addEventListener("click", async function (e) {
   e.preventDefault();
+  cardsList[currCardNum].classList.add("slide-out-blurred-right");
+  await wait(0.3);
+  cardsList[currCardNum].classList.remove("slide-out-blurred-right");
   cardsList[currCardNum].classList.add("hidden");
   currCardNum -= 1;
+  cardsList[currCardNum].classList.add("slide-in-blurred-left");
   cardsList[currCardNum].classList.remove("hidden");
+  await wait(0.3);
+  cardsList[currCardNum].classList.remove("slide-in-blurred-left");
   if (currCardNum === 0) arrowBtnLeft.classList.add("hidden");
   if (currCardNum < cardsList.length - 1)
     arrowBtnRight.classList.remove("hidden");
 });
+
+function wait(seconds) {
+  return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+}
