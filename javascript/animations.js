@@ -7,6 +7,12 @@ const hireMeNo = document.querySelector(".hire-me__no");
 const contactInfo = document.querySelector(".contact-info");
 const footerHeart = document.querySelector(".main-footer__heart");
 
+window.addEventListener("load", function () {
+  alert(
+    "I'm currently working on this website. Therefore you may face some issues while viewing it."
+  );
+});
+
 ///////////////////////////////////////
 //Title animation
 let animationIteration = 1;
