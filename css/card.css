@@ -1,34 +1,57 @@
 .card {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 4rem auto;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem 6rem auto;
   grid-template-areas:
-    "card__title card__title"
-    "card__svg card__info";
+    "card__title"
+    "card__svg"
+    "card__info";
   border-radius: 1rem;
   font-family: "Wellfleet", monospace;
   background-color: #343434;
 
   background: radial-gradient(#1d1d1d, #161616, #0e0e0e);
-  padding: 0rem 5rem;
+  padding: 0rem 1rem;
   border-inline: 5px solid #d6fb41;
+  padding-bottom: 0.5rem;
 }
 .card__title {
   grid-area: card__title;
-  letter-spacing: 0.2rem;
   justify-self: center;
   text-decoration: underline;
 }
 .card__svg {
   grid-area: card__svg;
   justify-self: center;
-  margin-top: 3rem;
-  width: 10rem;
-  height: 10rem;
+  margin-top: 1rem;
+  width: 5rem;
+  height: 5rem;
 }
 .card__info {
   grid-area: card__info;
-  word-spacing: 0.8rem;
   color: #f0f0f0;
-  margin: 3rem 5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 75rem) {
+  .card {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+      "card__title card__title"
+      "card__svg card__info";
+    padding: 0rem 5rem;
+  }
+  .card__title {
+    letter-spacing: 0.2rem;
+  }
+  .card__svg {
+    margin-top: 3rem;
+    width: 10rem;
+    height: 10rem;
+  }
+  .card__info {
+    word-spacing: 0.8rem;
+    margin: 3rem 5rem;
+  }
 }

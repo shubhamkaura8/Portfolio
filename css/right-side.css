@@ -1,38 +1,60 @@
 .right-side {
   display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "satellite"
-    "galaxy"
-    "alien";
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "satellite galaxy alien";
   color: #d6fb41;
-
   grid-area: right-side;
 }
 .right-side__satellite {
   grid-area: satellite;
   justify-self: center;
-  align-self: center;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
 }
 .right-side__galaxy {
   grid-area: galaxy;
   justify-self: center;
-  align-self: center;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   -webkit-animation: rotate-center 40s ease-in-out infinite alternate both;
   animation: rotate-center 40s ease-in-out infinite alternate both;
 }
 .right-side__alien {
   grid-area: alien;
   justify-self: center;
-  align-self: center;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   -webkit-animation: shake-vertical 30s cubic-bezier(0.455, 0.03, 0.515, 0.955)
     infinite alternate both;
   animation: shake-vertical 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
     alternate both;
+}
+
+@media (min-width: 75rem) {
+  .right-side {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "satellite"
+      "galaxy"
+      "alien";
+  }
+  .right-side__satellite {
+    grid-area: satellite;
+    align-self: center;
+    height: 5rem;
+    width: 5rem;
+  }
+  .right-side__galaxy {
+    grid-area: galaxy;
+    align-self: center;
+    height: 5rem;
+    width: 5rem;
+  }
+  .right-side__alien {
+    grid-area: alien;
+    align-self: center;
+    height: 5rem;
+    width: 5rem;
+  }
 }

@@ -20,12 +20,14 @@ body {
 .container {
   display: grid;
   height: 100%;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 4rem auto 3rem;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem 4rem auto 4rem 3rem;
   grid-template-areas:
-    "main-header main-header main-header"
-    "left-side main-body right-side"
-    "main-footer main-footer main-footer";
+    "main-header"
+    "left-side"
+    "main-body "
+    "right-side"
+    "main-footer";
 }
 
 .main-header {
@@ -34,17 +36,19 @@ body {
   grid-area: main-header;
   background-color: #d6fb41;
   margin: 0;
+  padding-bottom: 0.2rem;
   display: grid;
-  grid-template-columns: 5% 45% 50%;
-  grid-template-areas: "logo title navbar";
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "logo title";
   z-index: 1;
 }
 .logo {
+  grid-area: logo;
   height: 3rem;
   width: 3rem;
   align-self: center;
   justify-self: center;
-  margin-left: 2rem;
+  margin: 0 2rem;
 }
 .my-name {
   margin: 0;
@@ -55,35 +59,7 @@ body {
 }
 
 .navbar {
-  grid-area: navbar;
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  padding-right: 2rem;
-}
-.navbar__items {
-  margin: 0;
-  padding-top: 0.3rem;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-.navbar__item {
-  margin-right: 0.5rem;
-  align-self: center;
-}
-
-.navbar__item:hover,
-.navbar__item:active {
-  -webkit-animation: rotate-scale-up 0.5s linear both;
-  animation: rotate-scale-up 0.5s linear both;
-}
-.navbar__item a {
-  text-decoration: none;
-}
-.navbar__icon {
-  height: 3rem;
-  width: 3rem;
+  display: none;
 }
 
 .main-footer {
@@ -105,4 +81,59 @@ body {
   margin: 0 0.5rem;
   height: 3rem;
   width: 3rem;
+}
+
+@media (min-width: 75rem) {
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 4rem auto 3rem;
+    grid-template-areas:
+      "main-header main-header main-header"
+      "left-side main-body right-side"
+      "main-footer main-footer main-footer";
+  }
+  .main-header {
+    position: fixed;
+    width: 100%;
+    grid-area: main-header;
+    background-color: #d6fb41;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 5% 45% 50%;
+    grid-template-areas: "logo title navbar";
+    z-index: 1;
+  }
+  .navbar {
+    grid-area: navbar;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+  }
+  .navbar__items {
+    margin: 0;
+    padding-top: 0.3rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .navbar__item {
+    margin-right: 0.5rem;
+    align-self: center;
+  }
+
+  .navbar__item:hover,
+  .navbar__item:active {
+    -webkit-animation: rotate-scale-up 0.5s linear both;
+    animation: rotate-scale-up 0.5s linear both;
+  }
+  .navbar__item a {
+    text-decoration: none;
+  }
+  .navbar__icon {
+    height: 3rem;
+    width: 3rem;
+  }
 }
