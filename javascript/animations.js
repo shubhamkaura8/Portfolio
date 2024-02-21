@@ -2,9 +2,6 @@ const title = document.querySelector(".main-title");
 const arrowBtnRight = document.querySelector(".arrow-btn--right");
 const arrowBtnLeft = document.querySelector(".arrow-btn--Left");
 const cardsList = document.querySelectorAll(".card");
-const hireMeYes = document.querySelector(".hire-me__yes");
-const hireMeNo = document.querySelector(".hire-me__no");
-const contactInfo = document.querySelector(".contact-info");
 const footerHeart = document.querySelector(".main-footer__heart");
 
 window.addEventListener("load", function () {
@@ -100,18 +97,3 @@ arrowBtnLeft.addEventListener("click", async function (e) {
 function wait(seconds) {
   return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
 }
-
-///////////////////////////////////
-//Hire Me buttons
-hireMeYes.addEventListener("click", function (e) {
-  e.preventDefault();
-  hireMeYes.classList.add("hidden");
-  hireMeNo.classList.add("hidden");
-  contactInfo.classList.remove("hidden");
-  footerHeart.src = "/assets/svg/heart.svg";
-});
-
-hireMeNo.addEventListener("click", function (e) {
-  e.preventDefault();
-  footerHeart.src = "/assets/svg/broken-heart.svg";
-});
